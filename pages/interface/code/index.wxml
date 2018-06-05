@@ -1,0 +1,39 @@
+<import src="../../../style/header.wxml" />
+<import src="../../../style/footer.wxml" />
+
+<template is="head" />
+
+<view class="page_bd">
+  <form bindsubmit="formSubmit">
+      <view class="weui-cells__title">表单</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">链接地址</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" name="path" placeholder="请输入链接地址" value="pages/index/index"/>
+          </view>
+        </view>
+      </view>
+      <view class="weui-cells__title">二维码尺寸</view>
+      <view class="page__bd page__bd_spacing">
+        <slider show-value value="255" name="width" min="30" max="600" />
+      </view>
+      <button class="weui-btn" form-type="submit" type="primary">生成二维码</button>
+    </form>
+</view>
+
+<view class="js_dialog" id="iosDialog2" style="opacity: 1;" wx:if="{{imageBytes}}" >
+  <view class="weui-mask"></view>
+  <view class="weui-dialog">
+    <view class="weui-dialog__bd">
+      <image class="weui-code" src="{{imageBytes}}" style="width:255px;"/>
+    </view>
+    <view class="weui-dialog__ft">
+      <view bindtap="noneWindows" class="weui-dialog__btn weui-dialog__btn_primary">知道了</view> 
+    </view>
+  </view>
+</view>
+
+<template is="foot" />

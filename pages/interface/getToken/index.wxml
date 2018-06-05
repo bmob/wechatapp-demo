@@ -1,0 +1,20 @@
+<import src="../../../style/header.wxml" />
+<import src="../../../style/footer.wxml" />
+
+<template is="head" />
+<view class="page-section-title notice">微信access_token，业务场景,当其他平台需要使用你小程序的token，并不想与Bmob的平台冲突，可以通过此API实现。</view>
+
+<view class="container">
+  <view class="page-body">
+    <view class="btn-area">
+      <loading hidden="{{loading}}">获取中...</loading>
+      <button type="primary" bindtap="getToken">获取access_token</button>
+      <view>
+        <text>access_token：{{accessToken}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+<template is="foot" />

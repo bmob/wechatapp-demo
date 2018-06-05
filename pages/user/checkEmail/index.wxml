@@ -1,0 +1,19 @@
+<import src="../../../style/header.wxml" />
+<import src="../../../style/footer.wxml" />
+
+<template is="head" />
+<view class="btn-area">
+      <form bindsubmit="checkEmail" bindreset="formReset">
+        <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__bd">
+              <input class="weui-input" name="email" placeholder="请输入你的邮箱" />
+            </view>
+          </view>
+        </view>
+        <button type="primary" formType="submit">验证邮箱</button>
+        <button formType="reset">重置</button>
+      </form>
+  </view>
+
+<template is="foot" />

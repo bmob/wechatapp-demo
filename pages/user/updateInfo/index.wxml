@@ -1,0 +1,7 @@
+<button open-type="getUserInfo" bindgetuserinfo="getUserInfo" wx:if="{{hasUserInfo}}"> 更新用户数据 </button>
+
+
+<view style='text-align:center'>
+  <view><image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image></view>
+  <view><text style='text-align:center;'>{{userInfo.nickName}}</text></view>
+</view>

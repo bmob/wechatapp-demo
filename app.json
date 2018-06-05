@@ -1,0 +1,66 @@
+{
+  "pages":[
+    "pages/user/index",
+    "pages/user/login/index",
+    "pages/user/register/index",
+    "pages/user/smsLogin/index",
+    "pages/user/userInfo/index",
+    "pages/user/checkEmail/index",
+    "pages/user/resetPswd/index",
+    "pages/user/updateInfo/index",
+    "pages/user/getOpenid/index",
+    "pages/interface/index",
+    "pages/interface/upload/index",
+    "pages/interface/code/index",
+    "pages/interface/checkContent/index",
+    "pages/interface/pay/index",
+    "pages/interface/getToken/index",
+    "pages/interface/template/index",
+    "pages/interface/addAddress/index",
+    "pages/interface/select/index",
+    "pages/interface/chatroom/index",
+    "pages/database/index",
+    "pages/database/detail/index",
+    "pages/center/index",
+    "pages/center/release/index",
+    "pages/center/feedback/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#3891f8",
+    "navigationBarTitleText": "增删改查-小程序Demo",
+    "navigationBarTextStyle": "#fff"
+  },
+  "tabBar":{
+    "color":"#7A7E83",
+    "selectedColor":"#318efb",
+    "borderStyle": "#3891f8",
+    "backgroundColor": "#ffffff",
+    "list":[
+      {
+        "pagePath": "pages/user/index",
+        "iconPath": "images/icon_API.png",
+        "selectedIconPath": "images/icon_API_HL.png",
+        "text": "用户操作"
+      },
+      {
+        "pagePath": "pages/interface/index",
+        "iconPath": "images/list.png",
+        "selectedIconPath": "images/list1.png",
+        "text": "常用接口"
+      },
+      {
+        "pagePath": "pages/database/index",
+        "iconPath": "images/database.png",
+        "selectedIconPath": "images/database1.png",
+        "text": "数据库操作"
+      },
+      {
+        "pagePath": "pages/center/index",
+        "iconPath": "images/me.png",
+        "selectedIconPath": "images/me1.png",
+        "text": "我的"
+      }
+    ]
+  }   
+}

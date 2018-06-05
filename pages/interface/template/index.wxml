@@ -1,0 +1,41 @@
+<import src="../../../style/header.wxml" />
+<import src="../../../style/footer.wxml" />
+
+<template is="head" />
+
+<view class="page__bd">
+  <form bindsubmit="formSubmit" report-submit='true'>
+    <view class="weui-cells__title">小程序模板消息需要在微信小程序平台申请消息模板，通过传入模版，设置模版信息，需要在模版中设置多个参数(openId,templateId,formId)，此接口需要在真机上调试。请先更新用户信息</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">物品名称</view>
+        </view>
+        <view class="weui-cell__bd">
+            <input class="weui-input" placeholder="请输入物品名称" name="name" />
+          </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">快递公司</view>
+        </view>
+        <view class="weui-cell__bd">
+            <input class="weui-input" placeholder="请输入快递公司" name="company" />
+          </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">备注</view>
+        </view>
+        <view class="weui-cell__bd">
+            <input class="weui-input" placeholder="请输入备注" name="remark" />
+          </view>
+      </view>
+    </view>
+    <view class="weui-btn-area">
+            <button class="weui-btn" type="primary" formType="submit">确定</button>
+        </view>
+  </form>
+</view>
+
+<template is="foot" />

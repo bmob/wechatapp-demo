@@ -1,0 +1,21 @@
+<import src="../../../style/header.wxml" />
+<import src="../../../style/footer.wxml" />
+
+<template is="head"></template>
+
+<view class="container">
+  <view class="page-body">
+    <view class="btn-area">
+      <loading hidden="{{loading}}">获取中...</loading>
+      <button type="primary" bindtap="getUserInfo">获取用户登录信息</button>
+      <view>
+        <text>用户名：{{username}}</text>
+      </view>
+      <view>
+        <text>objectId：{{objectId}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<template is="foot"></template>

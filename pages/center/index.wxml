@@ -1,0 +1,73 @@
+<import src="../../style/footer.wxml" />
+
+<view class="page">
+  <view class="page__hd i-header" style="height:300rpx;">
+    <view class="g-bd">
+      <view></view>
+      <view class="g-bda">
+        <view bindtap="" class="g-bda-userinfo" style="padding-top:12rpx">
+          <image class="userinfo-avatar" src="{{userInfo.userPic}}"></image>
+          <text wx:if="{{userInfo.nickName}}" class="userinfo-nickname">{{userInfo.nickName}}</text>
+          <text wx:else class="userinfo-nickname" style='font-size:13px;'>尚未解锁,请点击下方的按钮解锁</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <loading hidden="{{loading}}">
+    授权中...
+  </loading>
+  <view class="page__bd" wx:if="{{!userInfo.userPic}}">
+    <view class="weui-panel">
+      <view class="weui-panel__hd">解锁更多功能</view>
+      <view class="weui-panel__bd">
+        <view class="zan-cell" style="margin:0px;padding:12px 0px;">
+          <button open-type="getUserInfo" bindgetuserinfo="open" class="open">
+            <image src="/images/open.png" class="open-img"></image>
+            <view class="open-word">点击解锁按钮解锁更多功能</view>
+          </button>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="page__bd">
+
+    <view class="weui-panel">
+      <view class="weui-panel__hd">账户中心</view>
+      <view class="weui-panel__bd">
+        <view class="weui-media-box weui-media-box_small-appmsg">
+          <view class="weui-cells weui-cells_in-small-appmsg">
+            <!-- <navigator url="release/index" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+              <view class="weui-cell__hd">
+                <image src="/images/reg.png" style="width: 20px;height: 20px;margin-right: 5px" />
+              </view>
+              <view class="weui-cell__bd weui-cell_primary">
+                <view>我发布的</view>
+              </view>
+              <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator> -->
+            <navigator url="feedback/index" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+              <view class="weui-cell__hd">
+                <image src="/images/edit.png" style="width: 20px;height: 20px;margin-right: 5px" />
+              </view>
+              <view class="weui-cell__bd weui-cell_primary">
+                <view>反馈建议</view>
+              </view>
+              <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator>
+            <navigator url="" bindtap="about" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+              <view class="weui-cell__hd">
+                <image src="/images/help.png" style="width: 20px;height: 20px;margin-right: 5px" />
+              </view>
+              <view class="weui-cell__bd weui-cell_primary">
+                <view>关于本程序</view>
+              </view>
+              <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<template is="foot" />

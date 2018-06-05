@@ -1,0 +1,20 @@
+<import src="../../../style/header.wxml" />
+<template is="head" />
+<view class="page-section-title notice">此接口需要用户在Bmob控制台授权小程序才可检测</view>
+<form bindsubmit="formSubmit">
+  <view class="page__bd">
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell">
+        <view class="weui-cell__bd">
+          <view>
+            <textarea class="weui-textarea" name="content" placeholder="请输入检测内容" style="height: 4em" />
+          </view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+  <view class="weui-btn-area">
+    <button class="weui-btn" form-type="submit" type="primary">提交</button>
+  </view>
+</form>

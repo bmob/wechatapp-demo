@@ -1,0 +1,23 @@
+<import src="../../../style/header.wxml" />
+
+<template is="head" />
+
+<view class="page">
+  <view class="page__bd">
+    <view class="weui-article">
+      <view style='text-align:center'>
+        <image src="{{rows.own.userPic}}" class="userPic"></image>
+        <view>{{rows.own.nickName}}</view>
+        <view>{{rows.createdAt}}</view>
+      </view>
+      <view class="weui-article__section">
+        <view class="weui-article__h1"> {{rows.title}}</view>
+        <view class="weui-article__section">
+          <view class="weui-article__p">
+            {{rows.content}}
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

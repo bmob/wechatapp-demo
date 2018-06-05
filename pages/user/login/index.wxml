@@ -1,0 +1,20 @@
+<import src="../../../style/header.wxml" />
+<import src="../../../style/footer.wxml" />
+<template is="head"></template>
+<form bindsubmit="formsubmit" bindreset="formReset">
+  <view class="section">
+        <input placeholder="请输入您的账户名" name="username"  />
+    </view>
+    <view class="section">
+        <input placeholder="请输入您的密码" password name="password"  />
+    </view>
+    <view class="btn-area">
+        <button formType="submit">登录</button>
+        <button formType="reset">重置</button>
+        <button bindtap="getUserInfo">登录信息</button>
+    </view>
+    <view class="reg">
+        <navigator url="../register/index" hover-class="other-navigator-hover">如果没有账户，点击注册</navigator>
+    </view>
+</form>
+<template is="foot"/>

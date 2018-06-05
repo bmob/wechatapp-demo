@@ -1,0 +1,18 @@
+<import src="../../style/header.wxml" />
+<view class="page">
+  <template is="head"></template>
+  <view class="page__bd">
+    <view class="weui-grids">
+      <block wx:for="{{grids}}" wx:key="{{index}}">
+      <navigator bindtap="{{item.click}}" class="weui-grid" wx:if="{{item.click}}" hover-class="weui-grid_active">
+          <image class="weui-grid__icon" src="/images/{{item.ico}}" />
+          <view class="weui-grid__label">{{item.name}}</view>
+        </navigator>
+        <navigator url="{{item.url}}" class="weui-grid" wx:if="{{!item.click}}" hover-class="weui-grid_active">
+          <image class="weui-grid__icon" src="/images/{{item.ico}}" />
+          <view class="weui-grid__label">{{item.name}}</view>
+        </navigator>
+      </block>
+    </view>
+  </view>
+</view>

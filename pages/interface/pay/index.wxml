@@ -1,0 +1,19 @@
+<import src="../../../style/header.wxml" />
+<import src="../../../style/footer.wxml" />
+
+<template is="head" />
+<view class="container">
+  <view class="page-body">
+    <view class="btn-area" style="margin-top:10px;">
+      <view style="font-weight:bold">简介：</view>
+      <view>微信小程序支付，用户付款到微信支付账户。</view>
+      <view style="font-weight:bold">使用条件：</view>
+      <view>1.需企业用户提前开通微信支付</view>
+      <view>2.填写支付商户id到Bmob控制台</view>
+      <view>3.开通Bmob专业版或以上版本（可开通试用，工单联系）</view>
+      <button type="primary" bindtap="pay">立即支付</button>
+    </view>
+  </view>
+</view>
+
+<template is="foot" />
