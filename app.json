@@ -10,6 +10,7 @@
     "pages/user/updateInfo/index",
     "pages/user/getOpenid/index",
     "pages/interface/index",
+    "pages/interface/shop",
     "pages/interface/upload/index",
     "pages/interface/code/index",
     "pages/interface/checkContent/index",

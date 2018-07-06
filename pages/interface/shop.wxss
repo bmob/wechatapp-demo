@@ -1,0 +1,125 @@
+/* 1像素解决方案 */
+/*
+ * 清除1px
+ */
+/*
+ * 清除浮动
+ */
+/*
+ * mobile
+ */
+/*
+ * 1px
+ */
+/*
+ * text
+ */
+/* 垂直居中 */
+/* 水平居中 */
+/* 水平垂直居中 */
+/* 超出部分出省略号 */
+/* 多行文本超出部分省略号 */
+.container {
+  display: flex;
+}
+.imgbox {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-style: rgba(231, 231, 231, 0.6);
+}
+.imgbox .ui-image {
+  width: 100%;
+}
+.small-title {
+  font-size: 24rpx;
+  text-align: center;
+  margin-top: 20rpx;
+}
+.goods-box {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+.goods-box .goods-list {
+  flex: 0 0 33.33%;
+  margin-top: 40rpx;
+}
+
+
+.ui-row {
+  position: relative;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.ui-row-border-top:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 1px;
+  border-top: 1px solid #C7C7C7;
+  color: #C7C7C7;
+  transform-origin: 0 0;
+  transform: scaleY(0.5);
+}
+.ui-row-border-bottom:after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 1px;
+  border-bottom: 1px solid #C7C7C7;
+  color: #C7C7C7;
+  transform-origin: 0 100%;
+  transform: scaleY(0.5);
+}
+
+
+.ui-col {
+  position: relative;
+  min-width: 0;
+  display: flex;
+  flex: 1;
+  height: 100%;
+}
+.ui-col-3 {
+  float: left;
+  height: 100%;
+  width: 25%;
+}
+
+.ui-col-content {
+  height: 100%;
+  min-width: 0;
+  flex-direction: column;
+  width: 100%;
+  display: flex;
+}
+
+
+ui-v-tab {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+.ui-v-tab {
+  padding: 14px 18px;
+  position: relative;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+.ui-v-tab.active {
+  color: #39f;
+  border-right: 1px solid #39f;
+}

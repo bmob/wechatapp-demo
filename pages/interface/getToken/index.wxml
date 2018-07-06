@@ -2,7 +2,7 @@
 <import src="../../../style/footer.wxml" />
 
 <template is="head" />
-<view class="page-section-title notice">微信access_token，业务场景,当其他平台需要使用你小程序的token，并不想与Bmob的平台冲突，可以通过此API实现。</view>
+<view class="page-section-title notice">access_token请不要暴露给客户端，微信access_token，业务场景,当自己平台需要使用你小程序的token，并不想与Bmob的平台冲突，可以通过此API实现。</view>
 
 <view class="container">
   <view class="page-body">
