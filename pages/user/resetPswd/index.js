@@ -1,4 +1,3 @@
-var Bmob = require("../../../dist/Bmob-1.4.4.min.js");
 var common = require("../../../utils/common.js");
 var that;
 Page({
@@ -16,7 +15,7 @@ Page({
     }
 
     let data = {email:email};
-    Bmob.requestPasswordReset(data).then(res=>{
+    wx.Bmob.requestPasswordReset(data).then(res=>{
       common.showTip("邮件已发送","success",function(){
         wx.switchTab({
           url: '/pages/user/index',
@@ -36,7 +35,7 @@ Page({
     let params = {
       mobilePhoneNumber: phone
     }
-    Bmob.requestSmsCode(params).then(function (response) {
+    wx.Bmob.requestSmsCode(params).then(function (response) {
       that.setData({
         phone: phone
       })
@@ -61,7 +60,7 @@ Page({
     }
 
     let data = { password: password};
-    Bmob.resetPasswordBySmsCode(smsCode,data).then(res => {
+    wx.Bmob.resetPasswordBySmsCode(smsCode,data).then(res => {
       common.showTip("修改成功", "success", function () {
         wx.switchTab({
           url: '/pages/user/index',

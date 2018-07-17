@@ -1,6 +1,5 @@
 // pages/other/other.js
 var that;
-var Bmob = require("../../../dist/Bmob-1.4.4.min.js");
 var common = require('../../../utils/common.js');
 Page({
   data: {
@@ -17,7 +16,7 @@ Page({
         if (res.code) {
           //发起网络请求
           console.log(res.code)
-          Bmob.User.requestOpenId(res.code).then(result=>{
+          wx.Bmob.User.requestOpenId(res.code).then(result=>{
             that.setData({
               loading: true,
               url: result.openid

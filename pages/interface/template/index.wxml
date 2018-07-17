@@ -33,7 +33,7 @@
       </view>
     </view>
     <view class="weui-btn-area">
-            <button class="weui-btn" type="primary" formType="submit">发送</button>
+            <button class="weui-btn" type="primary" formType="submit">确定</button>
         </view>
   </form>
 </view>

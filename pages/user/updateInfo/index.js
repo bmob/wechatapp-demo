@@ -1,4 +1,3 @@
-var Bmob = require("../../../dist/Bmob-1.4.4.min.js");
 Page({
 
   /**
@@ -14,7 +13,7 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: false
     })
-    Bmob.User.upInfo(e.detail.userInfo).then(result => {
+    wx.Bmob.User.upInfo(e.detail.userInfo).then(result => {
       console.log(result)
     }).catch(err => {
       console.log(err)

@@ -1,6 +1,5 @@
 // pages/database/index.js
 var that;
-var Bmob = require("../../dist/Bmob-1.4.4.min.js");
 var common = require("../../utils/common.js");
 Page({
 
@@ -103,9 +102,9 @@ Page({
 
     var userData = wx.getStorageSync("userData");
     //新增一行记录
-    var diary = Bmob.Query("diary");
+    var diary = wx.Bmob.Query("diary");
     //添加数据关联
-    var pointer = Bmob.Pointer("_User");
+    var pointer = wx.Bmob.Pointer("_User");
     var poiID = pointer.set(userData.objectId);
 
     diary.set("title", title);
@@ -132,7 +131,7 @@ Page({
       success:function(res){
         if(res.confirm){
           //删除一行数据
-          var query = Bmob.Query("diary");
+          var query = wx.Bmob.Query("diary");
           query.destroy(objectId).then(res=>{
             common.showTip("删除成功","success",function(){
               getList(that);
@@ -196,8 +195,8 @@ Page({
 function getList(t,k){
   that = t;
   //条件查询，获取当前用户日记
-  var query = Bmob.Query("diary");
-  var query1 = Bmob.Query("diary");
+  var query = wx.Bmob.Query("diary");
+  var query1 = wx.Bmob.Query("diary");
   var userData = wx.getStorageSync("userData");
   //模糊查询，付费应用可使用
   if(k){
@@ -231,7 +230,7 @@ function modify(t,e){
   var oldContent = that.data.nowContent;
   if((newTitle != oldTitle || newContent != oldContent)){
     //修改一行数据
-    var query = Bmob.Query("diary");
+    var query = wx.Bmob.Query("diary");
     query.set('id', objectId); //需要修改的objectId
     query.set('title',newTitle);
     query.set('content', newContent);

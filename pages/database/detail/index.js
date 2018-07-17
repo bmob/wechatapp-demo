@@ -1,5 +1,4 @@
 // pages/database/detail/index.js
-var Bmob = require("../../../dist/Bmob-1.4.4.min.js");
 Page({
 
   /**
@@ -16,7 +15,7 @@ Page({
     //获取一行记录
     var objectId = options.objectId;
     var that =this;
-    var query = Bmob.Query("diary");
+    var query = wx.Bmob.Query("diary");
     //数据关联,查询Pointer
     query.include('own', '_User')
     query.get(objectId).then(res=>{

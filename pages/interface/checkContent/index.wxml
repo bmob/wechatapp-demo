@@ -1,6 +1,6 @@
 <import src="../../../style/header.wxml" />
 <template is="head" />
-<view class="page-section-title notice">此接口需要用户在Bmob控制台授权小程序才可检测，接口基于微信违规词检查，建议答题等提交内容小程序，保存数据前都调用此接口。</view>
+<view class="page-section-title notice">此接口需要用户在Bmob控制台授权小程序才可检测</view>
 <form bindsubmit="formSubmit">
   <view class="page__bd">
     <view class="weui-cells weui-cells_after-title">

@@ -1,4 +1,3 @@
-var Bmob = require("../../../dist/Bmob-1.4.4.min.js");
 var common = require("../../../utils/common.js");
 Page({
 
@@ -40,7 +39,7 @@ Page({
       "emphasis_keyword": "keyword1.DATA"
     }
     console.log(modelData);
-    Bmob.sendWeAppMessage(modelData).then(function (response) {
+    wx.Bmob.sendWeAppMessage(modelData).then(function (response) {
       console.log(response);
       common.showTip("发送成功","success");
     }).catch(function (error) {

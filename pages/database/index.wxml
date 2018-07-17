@@ -4,7 +4,7 @@
   <scroll-view lower-threshold="800" bindscrolltolower="pullUpLoad" upper-threshold="0" scroll-y="true" style="height: {{windowHeight}}px;  ">
     <view class="page__bd">
 
-      <!--<button type="primary" bindtap="toAddDiary" hover-class="other-button-hover"> 增加Todo示例 </button>-->
+      <!--<button type="primary" bindtap="toAddDiary" hover-class="other-button-hover"> 增加日记 </button>-->
       <view class="weui-panel">
        <view class="weui-search-bar">
             <view class="weui-search-bar__form">
@@ -27,7 +27,7 @@
 
 
 
-        <view class="weui-panel__hd">Todo示例列表</view>
+        <view class="weui-panel__hd">日记列表</view>
         <view class="weui-panel__bd">
 <block wx:if="{{diaryList.length>0}}">
           <navigator class="weui-media-box weui-media-box_text" wx:for="{{diaryList}}" wx:key="diaryItem" url="/pages/database/detail/index?objectId={{item.objectId}}">
@@ -70,7 +70,7 @@
 <view class="js_dialog" id="androidDialog1" style="opacity: 1;" wx:if="{{writeDiary}}">
   <view class="weui-mask"></view>
   <view class="weui-dialog weui-skin_android">
-    <view class="weui-dialog__hd"><strong class="weui-dialog__title">添加Todo示例</strong>  </view>
+    <view class="weui-dialog__hd"><strong class="weui-dialog__title">添加日记</strong>  </view>
     <form bindsubmit="addDiary" report-submit="true">
       <view class="weui-dialog__bd">
         <view class="weui-cells__title">标题</view>
@@ -81,11 +81,11 @@
             </view>
           </view>
         </view>
-        <view class="weui-cells__title">Todo示例内容</view>
+        <view class="weui-cells__title">日记内容</view>
         <view class="weui-cells weui-cells_after-title">
           <view class="weui-cell">
             <view class="weui-cell__bd">
-              <textarea class="weui-textarea" name="content" placeholder="请输入Todo示例内容" style="height: 3.3em" />
+              <textarea class="weui-textarea" name="content" placeholder="请输入日记内容" style="height: 3.3em" />
               <view class="weui-textarea-counter">0/200</view>
             </view>
           </view>
@@ -101,7 +101,7 @@
 <view class="js_dialog" id="androidDialog2" style="opacity: 1;" wx:if="{{modifyDiarys}}">
   <view class="weui-mask"></view>
   <view class="weui-dialog weui-skin_android">
-    <view class="weui-dialog__hd"><strong class="weui-dialog__title">修改Todo示例</strong>  </view>
+    <view class="weui-dialog__hd"><strong class="weui-dialog__title">修改日记</strong>  </view>
     <form bindsubmit="modifyDiary">
       <view class="weui-dialog__bd">
         <view class="weui-cells__title">标题</view>
@@ -112,11 +112,11 @@
             </view>
           </view>
         </view>
-        <view class="weui-cells__title">Todo示例内容</view>
+        <view class="weui-cells__title">日记内容</view>
         <view class="weui-cells weui-cells_after-title">
           <view class="weui-cell">
             <view class="weui-cell__bd">
-              <textarea class="weui-textarea" name="content" value="{{nowContent}}" placeholder="请输入Todo示例内容" style="height: 3.3em" />
+              <textarea class="weui-textarea" name="content" value="{{nowContent}}" placeholder="请输入日记内容" style="height: 3.3em" />
               <view class="weui-textarea-counter">0/200</view>
             </view>
           </view>

@@ -155,7 +155,7 @@ Page({
     welcome(that);
 
     // new BmobSocketIo("39ee83f92ff3a195130596a4eaec5ddf");
-    var BmobSocketIo = this.bmobSocketIo = new bmobSocketIo('bb20359e8e7eb634fff2c76089ce0d80');
+    var BmobSocketIo = this.bmobSocketIo = new bmobSocketIo('2b515d918cf5e1b45b5ad89164fcd7ff');
     console.log("333")
 
 

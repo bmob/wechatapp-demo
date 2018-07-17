@@ -1,5 +1,4 @@
 // pages/center/feedback/index.js
-var Bmob = require('../../../dist/Bmob-1.4.4.min.js');
 var common = require('../../../utils/common.js');
 Page({
 
@@ -86,7 +85,7 @@ Page({
       that.setData({
         loading: true
       })
-      var query = Bmob.Query("feedback");
+      var query = wx.Bmob.Query("feedback");
       query.set("contact", contact);
       query.set("content", content);
       query.save().then(res => {

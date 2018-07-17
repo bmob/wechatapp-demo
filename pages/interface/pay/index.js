@@ -1,4 +1,3 @@
-var Bmob = require("../../../dist/Bmob-1.4.4.min.js");
 var common = require("../../../utils/common.js");
 Page({
 
@@ -11,7 +10,7 @@ Page({
   pay: function () {
     var openId = wx.getStorageSync('openid');
     //传参数金额，名称，描述,openid
-    Bmob.Pay.weApp(0.01, '哇哈哈1瓶', '哇哈哈饮料，杭州生产', openId).then(function (resp) {
+    wx.Bmob.Pay.weApp(0.01, '哇哈哈1瓶', '哇哈哈饮料，杭州生产', openId).then(function (resp) {
       console.log(resp);
 
       that.setData({

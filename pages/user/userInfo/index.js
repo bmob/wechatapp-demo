@@ -1,5 +1,4 @@
 // pages/user/userInfo/index.js
-var Bmob = require("../../../dist/Bmob-1.4.4.min.js");
 var common = require("../../../utils/common.js");
 var that;
 Page({
@@ -10,7 +9,7 @@ Page({
     that=this;
   },
   getUserInfo:function(){
-    let current = Bmob.User.current();
+    let current = wx.Bmob.User.current();
     if(current){
       that.setData({
         loading:true,

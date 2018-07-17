@@ -2,7 +2,7 @@
 var Bmob = require("/dist/Bmob-1.4.4.min.js");
 
 //初始化 Bmob.initialize("你的Application ID", "你的REST API Key");
-Bmob.initialize("bb20359e8e7eb634fff2c76089ce0d80","0dcb80eb0cf198b9facccbf3f0b29b89");
+Bmob.initialize("2b515d918cf5e1b45b5ad89164fcd7ff","927950dd9128da998c752d1addfcf47e");
 
 App({
   onLaunch: function () {

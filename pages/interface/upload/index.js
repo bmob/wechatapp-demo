@@ -1,5 +1,4 @@
 var that;
-var Bmob = require("../../../dist/Bmob-1.4.4.min.js");
 var common = require("../../../utils/common.js");
 Page({
 
@@ -29,7 +28,7 @@ Page({
             var extension = /\.([^.]*)$/.exec(tempFilePath);
             extension = extension[1].toLowerCase();
             var name = timestamp + "." +extension;
-            var file = Bmob.File(name, tempFilePath);
+            var file = wx.Bmob.File(name, tempFilePath);
             
           }
           file.save().then(res => {

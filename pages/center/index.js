@@ -1,5 +1,4 @@
 // pages/center/index.js
-var Bmob = require('../../dist/Bmob-1.4.4.min.js');
 var common = require('../../utils/common.js');
 
 Page({
@@ -19,7 +18,7 @@ Page({
     //页面初始化 options为页面跳转所带来的参数
     var that = this;
     var value = wx.getStorageSync('openid')
-    let current = Bmob.User.current();
+    let current = wx.Bmob.User.current();
     that.setData({
       userInfo: current
     })
@@ -78,7 +77,7 @@ Page({
 
     wx.login({
       success: function (res) {
-        Bmob.User.auth().then(res => {
+        wx.Bmob.User.auth().then(res => {
           console.log(res);
           var objectId = res.objectId;
           var openid = res.authData.weapp.openid;
@@ -95,7 +94,7 @@ Page({
                 var nickName = userInfo.nickName;
                 var userPic = userInfo.avatarUrl;
 
-                var query = Bmob.Query("_User");
+                var query = wx.Bmob.Query("_User");
                 query.get(objectId).then(res => {
                   console.log(res);
                   res.set("nickName", nickName);

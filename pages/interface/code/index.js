@@ -1,4 +1,3 @@
-var Bmob= require("../../../dist/Bmob-1.4.4.min.js");
 var common = require("../../../utils/common.js");
 Page({
 
@@ -22,7 +21,7 @@ Page({
       return false;
     }
     let qrData = { path: path, width: width, type: 1 };
-    Bmob.generateCode(qrData).then(function (res) {
+    wx.Bmob.generateCode(qrData).then(function (res) {
       console.log(res);
       that.setData({
         imageBytes: res.url

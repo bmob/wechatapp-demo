@@ -1,5 +1,5 @@
 // pages/register/index.js
-var Bmob = require("../../../dist/Bmob-1.4.4.min.js");
+
 var common = require("../../../utils/common.js");
 var that;
 Page({
@@ -26,7 +26,7 @@ Page({
         email:email,
         mobilePhoneNumber:phone
       }
-      Bmob.User.register(params).then(res=>{
+      wx.Bmob.User.register(params).then(res=>{
         common.showTip("注册成功");
         setTimeout(function () {
           wx.switchTab({

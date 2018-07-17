@@ -1,4 +1,3 @@
-var Bmob = require("../../../dist/Bmob-1.4.4.min.js");
 var common = require("../../../utils/common.js");
 Page({
 
@@ -17,8 +16,8 @@ Page({
       return false;
     }
 
-    var point = Bmob.GeoPoint({ latitude: parseFloat(latitude), longitude: parseFloat(longitude) }) //创建地理位置对象
-    var query = Bmob.Query('address'); //数据库名
+    var point = wx.Bmob.GeoPoint({ latitude: parseFloat(latitude), longitude: parseFloat(longitude) }) //创建地理位置对象
+    var query = wx.Bmob.Query('address'); //数据库名
     query.set("address", point)  //字段名
     query.save().then(res => {
       console.log(res)
