@@ -14,12 +14,61 @@ Page({
     windowWidth:0,
     diaryList:[],
   },
+  buf2hex: function (buffer) { // buffer is an ArrayBuffer
+    return Array.prototype.map.call(new Uint8Array(buffer), x => ('00' + x.toString(16)).slice(-2)).join('');
+  },
+
+  hextoString: function (hex) {
+    var arr = hex.split("")
+    var out = ""
+    for (var i = 0; i < arr.length / 2; i++) {
+      var tmp = "0x" + arr[i * 2] + arr[i * 2 + 1]
+      var charValue = String.fromCharCode(tmp);
+      out += charValue
+    }
+    return out
+  },
+  stringtoHex: function (str) {
+    var val = "";
+    for (var i = 0; i < str.length; i++) {
+      if (val == "")
+        val = str.charCodeAt(i).toString(16);
+      else
+        val += str.charCodeAt(i).toString(16);
+    }
+    val += "0a"
+    return val
+  },
+
+
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     that=this;
+    // console.log("hllll")
+    // const query = wx.Bmob.Query('diary');
+    // // 单词最多删除50条
+    // query.limit(50)
+    // query.find().then(todos => {
+
+    //   todos.destroyAll().then(res => {
+    //     // 成功批量修改
+    //     console.log(res, 'ok')
+    //   }).catch(err => {
+    //     console.log(err)
+    //   });
+    // })
+
+var a='abc'
+    var s = this.stringtoHex(a)
+
+    var k = this.hextoString(s)
+    console.log(s,k)
+
+
+console.log('hello')
   },
 
   /**
@@ -91,6 +140,7 @@ Page({
     })
   },
   addDiary:function(event){
+    console.log('add')
     var title = event.detail.value.title;
     var content = event.detail.value.content;
     var formId = event.detail.formId;
@@ -108,7 +158,7 @@ Page({
     var poiID = pointer.set(userData.objectId);
 
     diary.set("title", title);
-    diary.set("formId", formId);//保存formId
+    // diary.set("formId", formId);//保存formId
     diary.set("content", content);
     diary.set("own",poiID);
     diary.save().then(res=>{
@@ -211,6 +261,7 @@ function getList(t,k){
   query.limit(that.data.limit);
   //结果排序
   query.order("-createdAt");
+  query.statTo("groupby", "title");
   query.find().then(res=>{
     console.log(res);
     that.setData({

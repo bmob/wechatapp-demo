@@ -93,7 +93,7 @@
       </view>
       <view class="weui-dialog__ft">
         <view class="weui-dialog__btn weui-dialog__btn_default" bindtap="noneWindows">取消</view>
-        <button loading="{{loading}}" class="weui-dialog__btn weui-dialog__btn_primary" formType="submit">提交</button>
+        <button loading="{{loading}}" class="weui-dialog__btn weui-dialog__btn_primary" formType="submit">提交1</button>
       </view>
     </form>
   </view>

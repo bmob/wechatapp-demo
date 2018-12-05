@@ -35,6 +35,19 @@ Page({
             that.setData({
               loading: true
             })
+            console.log(res,99)
+
+            
+            const query = wx.Bmob.Query('diary');
+query.set("distfile",res[0])
+ 
+
+query.save().then(res => {
+  console.log(res)
+}).catch(err => {
+  console.log(err)
+})
+
             wx.hideNavigationBarLoading();
             common.showTip("上传成功", "success");
           })

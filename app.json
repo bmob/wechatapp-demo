@@ -1,5 +1,5 @@
 {
-  "pages":[
+  "pages": [
     "pages/user/index",
     "pages/user/login/index",
     "pages/user/register/index",
@@ -17,6 +17,7 @@
     "pages/interface/pay/index",
     "pages/interface/getToken/index",
     "pages/interface/template/index",
+
     "pages/interface/addAddress/index",
     "pages/interface/select/index",
     "pages/interface/chatroom/index",
@@ -24,7 +25,9 @@
     "pages/database/detail/index",
     "pages/center/index",
     "pages/center/release/index",
-    "pages/center/feedback/index"
+    "pages/center/feedback/index",
+    "pages/interface/decryption",
+    "pages/interface/decryption/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -32,12 +35,12 @@
     "navigationBarTitleText": "增删改查-小程序Demo",
     "navigationBarTextStyle": "#fff"
   },
-  "tabBar":{
-    "color":"#7A7E83",
-    "selectedColor":"#318efb",
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#318efb",
     "borderStyle": "#3891f8",
     "backgroundColor": "#ffffff",
-    "list":[
+    "list": [
       {
         "pagePath": "pages/user/index",
         "iconPath": "images/icon_API.png",
@@ -63,5 +66,5 @@
         "text": "我的"
       }
     ]
-  }   
+  }
 }
