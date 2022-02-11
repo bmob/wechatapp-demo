@@ -8,7 +8,8 @@ Page({
 
   },
   formSubmit: function (e) {
-    var userData = wx.getStorageSync("userData");
+
+    let userData = wx.Bmob.User.current()
     var open_Id = userData.openid;
     var template_Id = "63rsBPjJqaaCMUeLAMjO01tq2-XVN46Jaq-AMq1RzYo";
     var form_Id = e.detail.formId;

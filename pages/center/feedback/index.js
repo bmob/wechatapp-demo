@@ -14,7 +14,8 @@ Page({
    */
   onLoad: function (options) {
     var that =  this;
-    var userData = wx.getStorageSync("userData");
+
+    let userData = wx.Bmob.User.current()
     that.setData({
       userInfo:userData
     })

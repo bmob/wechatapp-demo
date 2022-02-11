@@ -123,7 +123,7 @@ Page({
       this.pushMessage(createSystemMessage('您当前未登陆...'))
     } else {
       var currentUser = wx.Bmob.User.current()
-      var userData = wx.getStorageSync('userData')
+      let userData = wx.Bmob.User.current()
       this.setData({ objectId: userData.objectId })
       console.log(userData.objectId)
       // 加载默认数据
@@ -263,7 +263,7 @@ Page({
     }
 
     var currentUser = wx.Bmob.User.current()
-    var userData = wx.getStorageSync('userData')
+    let userData = wx.Bmob.User.current()
     var pointer = wx.Bmob.Pointer('_User')
     var objectId = userData.objectId
 
@@ -296,7 +296,7 @@ Page({
 function welcome (that) {
 
   var currentUser = wx.Bmob.User.current()
-  var userData = wx.getStorageSync('userData')
+  let userData = wx.Bmob.User.current()
   var pointer = wx.Bmob.Pointer('_User')
 
   var objectId = that.data.objectId

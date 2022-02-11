@@ -1,10 +1,13 @@
 // app.js 
 // 源码引入方式，方便调试
-// import Bmob from 'utils/bmob-js-sdk-es6/src/lib/app.js'
-import Bmob from 'utils/bmob-js-sdk-es6/dist/Bmob-1.6.5.min.js'
+import Bmob from 'utils/hydrogen-js-sdk/src/lib/app.js'
+// import Bmob from 'dist/Bmob-2.2.5.min.js'
 
 // 初始化 Bmob.initialize('你的Application ID', '你的REST API Key');
-Bmob.initialize('bb20359e8e7eb634fff2c76089ce0d80', '0dcb80eb0cf198b9facccbf3f0b29b89');
+Bmob.initialize('bc7814ffb203da9f', '123456');
+Bmob.domain('https://apitest.bmob.cn')
+
+
 
 App({
   onLaunch: function () {

@@ -17,7 +17,6 @@
     "pages/interface/pay/index",
     "pages/interface/getToken/index",
     "pages/interface/template/index",
-
     "pages/interface/addAddress/index",
     "pages/interface/select/index",
     "pages/interface/chatroom/index",
@@ -33,12 +32,12 @@
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#3891f8",
     "navigationBarTitleText": "增删改查-小程序Demo",
-    "navigationBarTextStyle": "#fff"
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "color": "#7A7E83",
     "selectedColor": "#318efb",
-    "borderStyle": "#3891f8",
+    "borderStyle": "white",
     "backgroundColor": "#ffffff",
     "list": [
       {
@@ -66,5 +65,6 @@
         "text": "我的"
       }
     ]
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }

@@ -61,6 +61,20 @@ Page({
     //   });
     // })
 
+console.log("hello")
+    const query = wx.Bmob.Query('diary');
+// 单词最多删除50条
+query.limit(3)
+query.find().then(todos => {
+
+  todos.destroyAll().then(res => {
+    // 成功批量修改
+    console.log(res,'ok')
+  }).catch(err => {
+    console.log(err)
+  });
+})
+
 var a='abc'
     var s = this.stringtoHex(a)
 
@@ -149,14 +163,16 @@ console.log('hello')
       return false;
     }
 
+  //获取用户当前信息
+  let userData = wx.Bmob.User.current()
 
-    var userData = wx.getStorageSync("userData");
+    console.log("userData",userData)
     //新增一行记录
     var diary = wx.Bmob.Query("diary");
     //添加数据关联
     var pointer = wx.Bmob.Pointer("_User");
     var poiID = pointer.set(userData.objectId);
-
+    console.log("poiID",poiID)
     diary.set("title", title);
     // diary.set("formId", formId);//保存formId
     diary.set("content", content);
@@ -247,7 +263,7 @@ function getList(t,k){
   //条件查询，获取当前用户日记
   var query = wx.Bmob.Query("diary");
   var query1 = wx.Bmob.Query("diary");
-  var userData = wx.getStorageSync("userData");
+  let userData = wx.Bmob.User.current()
   //模糊查询，付费应用可使用
   if(k){
     query.equalTo("title", "==", { "$regex": "" + k + ".*" });

@@ -1,0 +1,48 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": -1,
+          "name": "shop",
+          "pathName": "pages/interface/shop",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "解密",
+          "pathName": "pages/interface/decryption/index",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "da",
+          "pathName": "pages/database/index",
+          "query": ""
+        },
+        {
+          "name": "pages/interface/checkContent/index",
+          "pathName": "pages/interface/checkContent/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "违规图检测",
+          "pathName": "pages/interface/checkContent/index",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

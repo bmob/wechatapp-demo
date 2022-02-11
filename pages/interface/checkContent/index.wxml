@@ -13,8 +13,24 @@
       </view>
     </view>
 
+
+
   </view>
   <view class="weui-btn-area">
     <button class="weui-btn" form-type="submit" type="primary">提交</button>
+  </view>
+
+  <view class="page-section-title notice">此接口需要用户在Bmob控制台授权小程序才可检测</view>
+
+  <view class="btn-area">
+    <loading hidden="{{!loading}}">
+      图片上传中...
+    </loading>
+    <button type="primary" bindtap="upload">图片上传（支持多张）</button>
+
+    <loading hidden="{{!loading1}}">
+      2.0图片上传中...
+    </loading>
+    <button type="primary" bindtap="uploadCheck">2.0异步图片上传（支持多张）</button>
   </view>
 </form>
