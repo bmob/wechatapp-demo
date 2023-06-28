@@ -8,7 +8,7 @@ Bmob.initialize('bc7814ffb203da9f', '123456');
 // Bmob.initialize('9731770784b8c006', '111111')
 // Bmob.domain('http://website-restful.bmobapp.com')
 // Bmob.domain('http://apitest.codenow.cn')
-Bmob.domain('https://api.codenow.cn')
+// Bmob.domain('https://api.codenow.cn')
 
 
 
