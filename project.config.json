@@ -36,13 +36,13 @@
     "disableUseStrict": false,
     "minifyWXML": true,
     "showES6CompileOption": false,
-    "useCompilerPlugins": false
+    "useCompilerPlugins": false,
+    "condition": false
   },
   "compileType": "miniprogram",
   "libVersion": "2.16.1",
   "appid": "wx094ede192e7e64b5",
   "projectname": "bmob%E7%A4%BA%E4%BE%8B",
-  "isGameTourist": false,
   "condition": {
     "search": {
       "list": []
@@ -79,5 +79,13 @@
         }
       ]
     }
+  },
+  "packOptions": {
+    "ignore": [],
+    "include": []
+  },
+  "editorSetting": {
+    "tabIndent": "insertSpaces",
+    "tabSize": 2
   }
 }

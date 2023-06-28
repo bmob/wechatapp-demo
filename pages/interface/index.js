@@ -9,7 +9,8 @@ var grids = [
   { "name": "小程序模板信息", "ico": "template.png", "url": "../interface/template/index" },
   { "name": "添加地理位置", "ico": "addAddress.png", "url": "../interface/addAddress/index" },
   { "name": "查询地理位置", "ico": "select.png", "url": "../interface/select/index" },
-  { "name": "聊天室", "ico": "chatroom.png", "url": "../interface/chatroom/index" }
+  { "name": "聊天室", "ico": "chatroom.png", "url": "../interface/chatroom/index" },
+  { "name": "ai", "ico": "chatroom.png", "url": "../interface/chatai/index" }
 
 
 ];

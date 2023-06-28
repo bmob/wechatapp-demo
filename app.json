@@ -20,6 +20,7 @@
     "pages/interface/addAddress/index",
     "pages/interface/select/index",
     "pages/interface/chatroom/index",
+    "pages/interface/chatai/index",
     "pages/database/index",
     "pages/database/detail/index",
     "pages/center/index",

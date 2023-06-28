@@ -1,31 +1,21 @@
 {
-  "setting": {},
+  "setting": {
+    "compileHotReLoad": true
+  },
   "condition": {
-    "plugin": {
-      "list": []
-    },
-    "game": {
-      "list": []
-    },
-    "gamePlugin": {
-      "list": []
-    },
     "miniprogram": {
       "list": [
         {
-          "id": -1,
           "name": "shop",
           "pathName": "pages/interface/shop",
           "query": ""
         },
         {
-          "id": -1,
           "name": "解密",
           "pathName": "pages/interface/decryption/index",
           "query": ""
         },
         {
-          "id": -1,
           "name": "da",
           "pathName": "pages/database/index",
           "query": ""
@@ -41,8 +31,24 @@
           "pathName": "pages/interface/checkContent/index",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "room",
+          "pathName": "pages/interface/chatroom/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/interface/chatai/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }
-  }
+  },
+  "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
+  "projectname": "bmob%E7%A4%BA%E4%BE%8B"
 }

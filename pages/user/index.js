@@ -44,6 +44,7 @@ var grids = [{
     "ico": "getOpenid.png",
     "url": "../user/getOpenid/index"
   },
+ 
 
 ];
 
