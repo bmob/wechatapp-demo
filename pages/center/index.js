@@ -10,7 +10,6 @@ Page({
   data: {
     userInfo: {},
     avatarUrl: defaultAvatarUrl,
-    defaultAvatarUrl: defaultAvatarUrl,
     loading: true
   },
 
@@ -23,8 +22,7 @@ Page({
     var value = wx.getStorageSync('openid')
     let current = wx.Bmob.User.current();
     that.setData({
-      userInfo: current,
-      avatarUrl: current && current.userPic ? current.userPic : defaultAvatarUrl
+      userInfo: current
     })
   },
 
@@ -41,63 +39,16 @@ Page({
   onShow: function () {
 
   },
-  
-  // 处理选择头像事件
   onChooseAvatar(e) {
     const { avatarUrl } = e.detail 
     this.setData({
       avatarUrl,
+      'userInfo.userPic': avatarUrl
     })
-    
-    // 获取当前用户并更新头像
+    // 更新用户信息到后端
     let current = wx.Bmob.User.current();
-    if (current && current.objectId) {
-      this.updateUserAvatar(current.objectId, avatarUrl);
-    } else {
-      wx.showToast({
-        title: '请先登录',
-        icon: 'none'
-      });
-    }
-  },
-  
-  // 更新用户头像到Bmob
-  updateUserAvatar: function(objectId, avatarUrl) {
-    var that = this;
-    that.setData({
-      loading: false
-    });
-    
-    var query = wx.Bmob.Query("_User");
-    query.get(objectId).then(res => {
-      console.log("正在更新用户头像:", res);
-      res.set("userPic", avatarUrl);
-      return res.save();
-    }).then(() => {
-      console.log("头像更新成功");
-      wx.showToast({
-        title: '头像更新成功',
-        icon: 'success'
-      });
-      
-      // 更新本地用户信息
-      let userInfo = that.data.userInfo;
-      userInfo.userPic = avatarUrl;
-      
-      that.setData({
-        loading: true,
-        userInfo: userInfo
-      });
-    }).catch(err => {
-      console.log("头像更新失败:", err);
-      that.setData({
-        loading: true
-      });
-      wx.showToast({
-        title: '头像更新失败',
-        icon: 'none'
-      });
-    });
+    current.set('userPic', avatarUrl);
+    current.save();
   },
 
   /**

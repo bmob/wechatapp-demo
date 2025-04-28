@@ -5,13 +5,12 @@
     <view class="g-bd">
       <view></view>
       <view class="g-bda">
-        <!-- 新的微信头像获取方式 -->
-        <view class="avatar-wrapper">
-          <button class="avatar-button" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
-            <image class="avatar" src="{{avatarUrl}}" mode="aspectFill"></image>
+        <view class="g-bda-userinfo" style="padding-top:12rpx">
+          <button class="avatar-wrapper1" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
+            <image class="avatar" src="{{avatarUrl}}"></image>
           </button>
           <text wx:if="{{userInfo.nickName}}" class="userinfo-nickname">{{userInfo.nickName}}</text>
-          <text wx:else class="userinfo-nickname" style='font-size:13px;'>尚未解锁,请点击头像选择头像</text>
+          <text wx:else class="userinfo-nickname" style='font-size:13px;'>尚未解锁,请点击下方的按钮解锁</text>
         </view>
       </view>
     </view>
@@ -19,7 +18,7 @@
   <loading hidden="{{loading}}">
     授权中...
   </loading>
-  <view class="page__bd" wx:if="{{!avatarUrl || avatarUrl === defaultAvatarUrl}}">
+  <view class="page__bd" wx:if="{{!userInfo.userPic}}">
     <view class="weui-panel">
       <view class="weui-panel__hd">解锁更多功能</view>
       <view class="weui-panel__bd">
