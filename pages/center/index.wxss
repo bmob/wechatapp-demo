@@ -14,3 +14,38 @@
 .open-word{
   font-size:13px;
 }
+
+/* 头像样式 */
+.avatar-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20rpx 0;
+}
+
+.avatar-button {
+  background: none !important;
+  padding: 0 !important;
+  width: 170rpx !important;
+  height: 170rpx !important;
+  border-radius: 50%;
+  margin-bottom: 10rpx;
+}
+
+.avatar-button::after {
+  border: none;
+}
+
+.avatar {
+  width: 170rpx;
+  height: 170rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.userinfo-nickname {
+  color: #ffffff;
+  margin-top: 15rpx;
+  font-size: 32rpx;
+}

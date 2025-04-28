@@ -61,20 +61,6 @@ Page({
     //   });
     // })
 
-console.log("hello")
-    const query = wx.Bmob.Query('diary');
-// 单词最多删除50条
-query.limit(3)
-query.find().then(todos => {
-
-  todos.destroyAll().then(res => {
-    // 成功批量修改
-    console.log(res,'ok')
-  }).catch(err => {
-    console.log(err)
-  });
-})
-
 var a='abc'
     var s = this.stringtoHex(a)
 
@@ -259,6 +245,13 @@ console.log('hello')
 })
 
 function getList(t,k){
+
+  const querya = wx.Bmob.Query('diary')
+  querya.field('tags','11eb442e8a')
+  querya.relation('tag').then(res => {
+  console.log(res);
+})
+
   that = t;
   //条件查询，获取当前用户日记
   var query = wx.Bmob.Query("diary");

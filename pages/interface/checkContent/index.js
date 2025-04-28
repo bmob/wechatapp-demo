@@ -96,8 +96,25 @@ Page({
       common.showTip("请输入内容", "loading");
       return false;
     }
-    wx.Bmob.checkMsg(content).then(res => {
-      common.showTip(res.msg,"success");
+    // wx.Bmob.checkMsg(content).then(res => {
+    //   common.showTip(res.msg,"success");
+    // }).catch(err => {
+    //   console.log(err);
+    // });
+    wx.Bmob.User.auth("openid").then(res=>{
+      console.log(res);
+    })
+
+    let userData = wx.Bmob.User.current()
+        var open_Id = userData.openid;
+    let data = {
+      openid: open_Id,
+      scene: 2,
+      content:content
+  }
+    wx.Bmob.checkMsg2(data).then(res => {
+      console.log(res);
+      common.showTip(res.errmsg,"success");
     }).catch(err => {
       console.log(err);
     });

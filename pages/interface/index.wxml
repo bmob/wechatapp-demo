@@ -14,5 +14,23 @@
         </navigator>
       </block>
     </view>
+    
+    <!-- 手机号按钮和显示区域 -->
+    <view class="weui-cells__title">获取手机号</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell">
+        <view class="weui-cell__bd">
+          <button class="weui-btn" type="primary" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">获取手机号码</button>
+        </view>
+      </view>
+    </view>
+    
+    <!-- 手机号显示区域 -->
+    <view class="weui-cells__title" wx:if="{{phoneNumber}}">获取到的手机号</view>
+    <view class="weui-cells weui-cells_after-title" wx:if="{{phoneNumber}}">
+      <view class="weui-cell">
+        <view class="weui-cell__bd">{{phoneNumber}}</view>
+      </view>
+    </view>
   </view>
 </view>

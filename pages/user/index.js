@@ -57,12 +57,6 @@ Page({
   },
   onLoad: () => {
     // console.log(GetUrlRelativePath(), 'mmm')
-    let val = [
-      'http://dter-files.appmin.cn/2021/06/24/6f6e9be34087f860803ea2d8df694a4a.jpg'
-    ]
-    let del = wx.Bmob.File();
-    del.destroy(val).then(res => {
-      console.log(res)
-    });
+     
   }
 })

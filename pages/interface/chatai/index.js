@@ -332,6 +332,7 @@
        }],
        "session": objectId
      }
+     console.log(this.ChatAi);
      this.ChatAi.send(JSON.stringify(datas))
 
      that.pushMessage(createUserMessage(content, userData, true))
